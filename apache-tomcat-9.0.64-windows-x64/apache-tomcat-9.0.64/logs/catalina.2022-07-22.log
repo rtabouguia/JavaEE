@@ -2766,3 +2766,423 @@
 		... 43 more
 22-Jul-2022 13:48:41.602 INFO [http-nio-8080-exec-190] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [121] ms
 22-Jul-2022 13:51:28.919 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:12:41.596 INFO [http-nio-8080-exec-206] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:12:41.598 WARNING [http-nio-8080-exec-206] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:12:41.767 SEVERE [http-nio-8080-exec-206] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:690)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:538)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1690)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+		at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+		at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1614)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1026)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:357)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.filters.HttpHeaderSecurityFilter.doFilter(HttpHeaderSecurityFilter.java:126)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:660)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:378)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:56)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		... 42 more
+	Caused by: java.lang.IllegalArgumentException: Les servlets nommés [FirstServlet] et [fr.m2i.javawebapp.FirstServlet] sont tous deux associés au même modèle d'URL [/FirstServlet], ce qui n'est pas permis
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMappingDecoded(WebXml.java:343)
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMapping(WebXml.java:336)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationWebServlet(ContextConfig.java:2680)
+		at org.apache.catalina.startup.ContextConfig.processClass(ContextConfig.java:2359)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2348)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2249)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processClasses(ContextConfig.java:1398)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1303)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 43 more
+22-Jul-2022 14:12:41.841 INFO [http-nio-8080-exec-206] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [246] ms
+22-Jul-2022 14:12:51.839 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload Rechargement du contexte [/java-web-app]
+22-Jul-2022 14:14:16.421 INFO [http-nio-8080-exec-201] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:14:16.459 INFO [http-nio-8080-exec-212] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:14:16.460 WARNING [http-nio-8080-exec-212] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:14:16.850 INFO [http-nio-8080-exec-212] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [390] ms
+22-Jul-2022 14:14:16.862 INFO [http-nio-8080-exec-211] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:14:22.973 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:14:23.005 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:14:23.006 WARNING [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:14:23.915 SEVERE [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:690)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1889)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:583)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:473)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1667)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:315)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1162)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1365)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1347)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		... 24 more
+	Caused by: java.lang.IllegalArgumentException: Les servlets nommés [FirstServlet] et [fr.m2i.javawebapp.FirstServlet] sont tous deux associés au même modèle d'URL [/FirstServlet], ce qui n'est pas permis
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMappingDecoded(WebXml.java:343)
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMapping(WebXml.java:336)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationWebServlet(ContextConfig.java:2680)
+		at org.apache.catalina.startup.ContextConfig.processClass(ContextConfig.java:2359)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2348)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2249)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processClasses(ContextConfig.java:1398)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1303)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 25 more
+22-Jul-2022 14:14:24.172 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [1 168] ms
+22-Jul-2022 14:14:51.126 INFO [http-nio-8080-exec-214] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:15:14.156 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:15:14.157 WARNING [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:15:14.214 SEVERE [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:690)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:538)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1690)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+		at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+		at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1614)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1026)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:357)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.filters.HttpHeaderSecurityFilter.doFilter(HttpHeaderSecurityFilter.java:126)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:660)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:378)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:56)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		... 42 more
+	Caused by: java.lang.IllegalArgumentException: Les servlets nommés [FirstServlet] et [fr.m2i.javawebapp.FirstServlet] sont tous deux associés au même modèle d'URL [/FirstServlet], ce qui n'est pas permis
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMappingDecoded(WebXml.java:343)
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMapping(WebXml.java:336)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationWebServlet(ContextConfig.java:2680)
+		at org.apache.catalina.startup.ContextConfig.processClass(ContextConfig.java:2359)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2348)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2249)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processClasses(ContextConfig.java:1398)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1303)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 43 more
+22-Jul-2022 14:15:14.443 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [286] ms
+22-Jul-2022 14:15:21.456 INFO [http-nio-8080-exec-202] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:15:21.479 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:15:21.480 WARNING [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:15:21.525 SEVERE [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:690)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:538)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1690)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+		at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+		at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1614)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1026)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:357)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.filters.HttpHeaderSecurityFilter.doFilter(HttpHeaderSecurityFilter.java:126)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:660)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:378)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:56)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		... 42 more
+	Caused by: java.lang.IllegalArgumentException: Les servlets nommés [FirstServlet] et [fr.m2i.javawebapp.FirstServlet] sont tous deux associés au même modèle d'URL [/FirstServlet], ce qui n'est pas permis
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMappingDecoded(WebXml.java:343)
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMapping(WebXml.java:336)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationWebServlet(ContextConfig.java:2680)
+		at org.apache.catalina.startup.ContextConfig.processClass(ContextConfig.java:2359)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2348)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2249)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processClasses(ContextConfig.java:1398)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1303)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 43 more
+22-Jul-2022 14:15:21.565 INFO [http-nio-8080-exec-216] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [86] ms
+22-Jul-2022 14:16:14.759 INFO [http-nio-8080-exec-202] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:16:15.285 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:16:15.311 INFO [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:16:15.313 WARNING [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:16:15.382 SEVERE [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:690)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:538)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1690)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:293)
+		at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:811)
+		at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1614)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1026)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:357)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.filters.HttpHeaderSecurityFilter.doFilter(HttpHeaderSecurityFilter.java:126)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:660)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:378)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:56)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		... 42 more
+	Caused by: java.lang.IllegalArgumentException: Les servlets nommés [FirstServlet] et [fr.m2i.javawebapp.FirstServlet] sont tous deux associés au même modèle d'URL [/FirstServlet], ce qui n'est pas permis
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMappingDecoded(WebXml.java:343)
+		at org.apache.tomcat.util.descriptor.web.WebXml.addServletMapping(WebXml.java:336)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationWebServlet(ContextConfig.java:2680)
+		at org.apache.catalina.startup.ContextConfig.processClass(ContextConfig.java:2359)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2348)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2249)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processAnnotationsWebResource(ContextConfig.java:2243)
+		at org.apache.catalina.startup.ContextConfig.processClasses(ContextConfig.java:1398)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1303)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 43 more
+22-Jul-2022 14:16:15.407 INFO [http-nio-8080-exec-217] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [95] ms
+22-Jul-2022 14:16:16.112 INFO [http-nio-8080-exec-221] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:16:32.242 INFO [http-nio-8080-exec-219] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:16:32.244 WARNING [http-nio-8080-exec-219] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:16:32.553 INFO [http-nio-8080-exec-219] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [310] ms
+22-Jul-2022 14:16:32.557 INFO [http-nio-8080-exec-218] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:21:38.092 INFO [http-nio-8080-exec-229] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:21:38.124 INFO [http-nio-8080-exec-225] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:21:38.125 WARNING [http-nio-8080-exec-225] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:21:38.486 INFO [http-nio-8080-exec-225] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [362] ms
+22-Jul-2022 14:21:38.489 INFO [http-nio-8080-exec-226] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:22:15.570 INFO [http-nio-8080-exec-218] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:22:15.624 INFO [http-nio-8080-exec-228] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:22:15.625 WARNING [http-nio-8080-exec-228] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:22:15.931 INFO [http-nio-8080-exec-228] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [306] ms
+22-Jul-2022 14:22:15.936 INFO [http-nio-8080-exec-232] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:23:14.561 INFO [http-nio-8080-exec-234] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:23:26.018 INFO [http-nio-8080-exec-236] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:23:26.025 WARNING [http-nio-8080-exec-236] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:23:26.237 INFO [http-nio-8080-exec-236] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [218] ms
+22-Jul-2022 14:23:26.239 INFO [http-nio-8080-exec-234] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:24:16.075 INFO [http-nio-8080-exec-242] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:24:33.390 INFO [http-nio-8080-exec-224] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:24:33.391 WARNING [http-nio-8080-exec-224] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:24:33.633 INFO [http-nio-8080-exec-224] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [243] ms
+22-Jul-2022 14:24:33.635 INFO [http-nio-8080-exec-231] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:28:13.827 INFO [http-nio-8080-exec-247] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:28:34.337 INFO [http-nio-8080-exec-247] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:28:34.338 WARNING [http-nio-8080-exec-247] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:28:34.931 INFO [http-nio-8080-exec-247] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [595] ms
+22-Jul-2022 14:28:34.935 INFO [http-nio-8080-exec-249] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:31:36.727 INFO [http-nio-8080-exec-247] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:32:37.924 INFO [http-nio-8080-exec-263] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:32:37.926 WARNING [http-nio-8080-exec-263] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:32:38.565 INFO [http-nio-8080-exec-263] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [640] ms
+22-Jul-2022 14:32:38.570 INFO [http-nio-8080-exec-260] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:35:22.847 INFO [http-nio-8080-exec-261] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/java-web-app] a démarré
+22-Jul-2022 14:35:23.137 INFO [http-nio-8080-exec-261] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+22-Jul-2022 14:35:24.646 INFO [http-nio-8080-exec-267] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:36:03.860 INFO [http-nio-8080-exec-270] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:36:03.861 WARNING [http-nio-8080-exec-270] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:36:04.062 INFO [http-nio-8080-exec-270] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [201] ms
+22-Jul-2022 14:36:04.064 INFO [http-nio-8080-exec-267] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:51:10.146 INFO [http-nio-8080-exec-279] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:51:10.666 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:51:10.727 INFO [http-nio-8080-exec-278] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:51:10.728 WARNING [http-nio-8080-exec-278] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:51:11.035 INFO [http-nio-8080-exec-278] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [308] ms
+22-Jul-2022 14:51:11.038 INFO [http-nio-8080-exec-271] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:51:55.310 INFO [http-nio-8080-exec-275] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/java-web-app] a démarré
+22-Jul-2022 14:51:55.635 INFO [http-nio-8080-exec-275] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+22-Jul-2022 14:51:59.353 INFO [http-nio-8080-exec-276] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:52:12.802 INFO [http-nio-8080-exec-275] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:52:12.803 WARNING [http-nio-8080-exec-275] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:52:13.177 INFO [http-nio-8080-exec-275] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [375] ms
+22-Jul-2022 14:52:13.181 INFO [http-nio-8080-exec-276] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:53:34.131 INFO [http-nio-8080-exec-289] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/java-web-app] a démarré
+22-Jul-2022 14:53:34.382 INFO [http-nio-8080-exec-289] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+22-Jul-2022 14:54:53.048 INFO [http-nio-8080-exec-289] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 14:54:53.102 INFO [http-nio-8080-exec-287] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 14:54:53.103 WARNING [http-nio-8080-exec-287] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 14:54:53.337 INFO [http-nio-8080-exec-287] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [235] ms
+22-Jul-2022 14:54:53.340 INFO [http-nio-8080-exec-276] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+22-Jul-2022 14:59:07.080 INFO [http-nio-8080-exec-302] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/java-web-app] a démarré
+22-Jul-2022 14:59:07.308 INFO [http-nio-8080-exec-302] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+22-Jul-2022 15:00:44.217 INFO [http-nio-8080-exec-295] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/java-web-app] a démarré
+22-Jul-2022 15:00:44.438 INFO [http-nio-8080-exec-295] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+22-Jul-2022 15:01:52.678 INFO [http-nio-8080-exec-298] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 15:01:53.210 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
+22-Jul-2022 15:02:10.203 INFO [http-nio-8080-exec-303] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml]
+22-Jul-2022 15:02:10.204 WARNING [http-nio-8080-exec-303] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/java-web-app] dans le descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a été ignoré
+22-Jul-2022 15:02:11.246 INFO [http-nio-8080-exec-303] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [1 043] ms
+22-Jul-2022 15:02:11.262 INFO [http-nio-8080-exec-295] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/java-web-app]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
