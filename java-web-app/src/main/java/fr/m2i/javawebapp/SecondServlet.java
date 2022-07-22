@@ -32,7 +32,9 @@ public class SecondServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            this.getServletContext().getRequestDispatcher("/SecondServlet.html").forward(request, response);
+        
+            request.setAttribute("name", "Raisa");
+            this.getServletContext().getRequestDispatcher("/secondjsp.jsp").forward(request, response);
     }
 
     /**
