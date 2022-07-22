@@ -2765,3 +2765,4 @@
 		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
 		... 43 more
 22-Jul-2022 13:48:41.602 INFO [http-nio-8080-exec-190] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [C:\Users\RAISA\OneDrive\Documents\POEC JAVA\JAVA\JAVA EE\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\conf\Catalina\localhost\java-web-app.xml] a pris [121] ms
+22-Jul-2022 13:51:28.919 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/java-web-app]
