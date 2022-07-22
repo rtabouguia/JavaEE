@@ -16,28 +16,15 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author RAISA
  */
-@WebServlet("/FirstServlet") 
+//@WebServlet("/FirstServlet") 
 public class FirstServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            super.doGet(request, response);
-           RequestDispatcher dispatcher = request.getRequestDispatcher("/FirstServlet.html");
-            dispatcher.forward(request, response);
+            //super.doGet(request, response);
+           this.getServletContext().getRequestDispatcher("/FirstServlet.html").forward(request, response);
 
     }
 
