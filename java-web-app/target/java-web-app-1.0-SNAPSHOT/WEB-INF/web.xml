@@ -20,6 +20,18 @@
         <servlet-name>NbresPairs</servlet-name>
         <servlet-class>fr.m2i.javawebapp.NbresPairs</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CountWordsServlet</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.CountWordsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CountWordsServ</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.CountWordsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Premier</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.Premier</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/firstjsp</url-pattern>
@@ -39,6 +51,14 @@
     <servlet-mapping>
         <servlet-name>NbresPairs</servlet-name>
         <url-pattern>/newjstl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CountWordsServlet</servlet-name>
+        <url-pattern>/countWordsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Premier</servlet-name>
+        <url-pattern>/premier</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

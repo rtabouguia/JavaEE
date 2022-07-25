@@ -1,5 +1,7 @@
+fr\m2i\javawebapp\Premier.class
+fr\m2i\javawebapp\FirstServlet.class
 fr\m2i\javawebapp\SecondServlet.class
 fr\m2i\javawebapp\ShowRequestHeaders.class
+fr\m2i\javawebapp\CountWordsServlet.class
 fr\m2i\javawebapp\NbresPairs.class
-fr\m2i\javawebapp\FirstServlet.class
 fr\m2i\javawebapp\ShowIPAddress.class
