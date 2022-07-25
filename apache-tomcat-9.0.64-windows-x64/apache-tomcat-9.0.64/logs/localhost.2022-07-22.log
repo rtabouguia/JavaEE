@@ -510,3 +510,10 @@ Stacktrace:
 		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
 		... 37 more
+22-Jul-2022 17:03:54.849 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+22-Jul-2022 17:03:54.849 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+22-Jul-2022 17:12:33.085 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+22-Jul-2022 17:12:33.085 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+22-Jul-2022 17:12:33.090 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@25230246')
+22-Jul-2022 17:14:19.450 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+22-Jul-2022 17:14:19.450 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
