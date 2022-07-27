@@ -32,6 +32,18 @@
         <servlet-name>Premier</servlet-name>
         <servlet-class>fr.m2i.javawebapp.Premier</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DistribProduit</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.Distributeur.servlet.DistribProduit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.session.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>fr.m2i.javawebapp.session.LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/firstjsp</url-pattern>
@@ -59,6 +71,18 @@
     <servlet-mapping>
         <servlet-name>Premier</servlet-name>
         <url-pattern>/premier</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DistribProduit</servlet-name>
+        <url-pattern>/distribProduit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
